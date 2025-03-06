@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Environmental Health and Safety (EHS) Awareness</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to an external CSS file for styling -->
+    <script src="script.js" defer></script> <!-- Link to an external JavaScript file -->
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#safety-guidelines">Workplace Safety Guidelines</a></li>
+                <li><a href="#emergency-preparedness">Emergency Preparedness</a></li>
+                <li><a href="#compliance">Environmental Compliance</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Homepage Section -->
+    <section id="home">
+        <h1>Welcome to the Environmental Health and Safety Awareness Website</h1>
+        <p>This website provides essential guidelines and resources for ensuring safety in the workplace and complying with environmental regulations.</p>
+    </section>
+
+    <!-- Workplace Safety Guidelines Section -->
+    <section id="safety-guidelines">
+        <h2>Workplace Safety Guidelines</h2>
+        <p>Learn about workplace safety protocols to protect yourself and your colleagues.</p>
+        <button onclick="showSafetyTips()">Click for Safety Tips</button>
+        <div id="safety-tips"></div>
+    </section>
+
+    <!-- Emergency Preparedness Section -->
+    <section id="emergency-preparedness">
+        <h2>Emergency Preparedness</h2>
+        <p>Find out how to prepare for emergencies, including evacuation procedures and emergency kits.</p>
+    </section>
+
+    <!-- Environmental Compliance Section -->
+    <section id="compliance">
+        <h2>Environmental Compliance</h2>
+        <p>Ensure your workplace complies with environmental regulations to prevent pollution and maintain a safe environment.</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Environmental Health and Safety. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
