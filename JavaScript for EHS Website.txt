@@ -1,0 +1,70 @@
+// JavaScript for EHS Website
+
+// 1. Safety Quiz Function (Workplace Safety Guidelines Page)
+function safetyQuiz() {
+    let score = 0;
+    let answers = ['b', 'c', 'a']; // Correct answers for example quiz
+    let userAnswers = [];
+    
+    for (let i = 1; i <= answers.length; i++) {
+        let response = document.querySelector(`input[name='q${i}']:checked`);
+        if (response) {
+            userAnswers.push(response.value);
+            if (response.value === answers[i - 1]) {
+                score++;
+            }
+        }
+    }
+    document.getElementById('quizResult').innerText = `You scored ${score}/${answers.length}!`;
+}
+
+// 2. Emergency Checklist Generator (Emergency Preparedness Page)
+function generateChecklist() {
+    let scenario = document.getElementById('scenarioSelect').value;
+    let checklist = '';
+    
+    if (scenario === 'fire') {
+        checklist = '1. Pull the fire alarm\n2. Evacuate the building\n3. Call 911';
+    } else if (scenario === 'chemical') {
+        checklist = '1. Evacuate the area\n2. Contain the spill if safe\n3. Contact hazardous materials team';
+    } else if (scenario === 'medical') {
+        checklist = '1. Call for medical assistance\n2. Administer first aid\n3. Stay with the injured person';
+    }
+    
+    document.getElementById('checklistDisplay').innerText = checklist;
+}
+
+// 3. Environmental Impact Calculator (Environmental Compliance Page)
+function calculateImpact() {
+    let wasteAmount = parseInt(document.getElementById('wasteInput').value) || 0;
+    let impactLevels = ['Low', 'Moderate', 'High'];
+    let impact = '';
+    
+    if (wasteAmount < 10) {
+        impact = impactLevels[0];
+    } else if (wasteAmount >= 10 && wasteAmount < 50) {
+        impact = impactLevels[1];
+    } else {
+        impact = impactLevels[2];
+    }
+    
+    document.getElementById('impactResult').innerText = `Your environmental impact level is: ${impact}`;
+}
+
+// 4. Contact Form Validation (Homepage)
+function validateForm() {
+    let name = document.getElementById('nameInput').value;
+    let email = document.getElementById('emailInput').value;
+    let message = document.getElementById('messageInput').value;
+    
+    if (!name || !email || !message) {
+        alert('Please fill in all fields before submitting.');
+        return false;
+    }
+    if (!email.includes('@')) {
+        alert('Please enter a valid email address.');
+        return false;
+    }
+    alert('Form submitted successfully!');
+    return true;
+}
